@@ -46,3 +46,16 @@ body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex: 1 1 calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    flex: 1 1 100%;
+  }
+}
+
