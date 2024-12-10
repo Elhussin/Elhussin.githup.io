@@ -41,3 +41,37 @@ languageButton.addEventListener("click", () => {
     aboutDescription.textContent = "[أدخل هنا نبذة مختصرة عن نفسك].";
   }
 });
+
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener('click', () => {
+      document.body.removeChild(lightbox);
+    });
+  });
+});
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // جلب بيانات النموذج
+  const formData = new FormData(contactForm);
+
+  // محاكاة إرسال البيانات إلى الخادم
+  formStatus.textContent = "جاري الإرسال...";
+  setTimeout(() => {
+    formStatus.textContent = "تم إرسال رسالتك بنجاح!";
+    contactForm.reset();
+  }, 2000);
+});
+
