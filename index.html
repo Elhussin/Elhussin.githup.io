@@ -9,39 +9,40 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#about">عني</a></li>
-        <li><a href="#portfolio">الأعمال</a></li>
-        <li><a href="#contact">تواصل</a></li>
-      </ul>
+      <button id="toggle-dark-mode">تبديل الوضع الليلي</button>
+      <button id="toggle-language">EN</button>
     </nav>
   </header>
-  <section id="home">
-    <h1>مرحبًا بكم!</h1>
-    <p>أنا [اسمك]، مطور ويب.</p>
-  </section>
-  <section id="about">
-    <h2>عني</h2>
-    <p>[معلوماتك الشخصية ونبذة عنك]</p>
-  </section>
-  <section id="portfolio">
-    <h2>الأعمال</h2>
-    <!-- معرض الأعمال -->
-  </section>
-  <section id="contact">
-    <h2>تواصل معي</h2>
-    <form>
-      <input type="text" placeholder="اسمك">
-      <input type="email" placeholder="البريد الإلكتروني">
-      <textarea placeholder="رسالتك"></textarea>
-      <button type="submit">إرسال</button>
-    </form>
-  </section>
+  <main>
+    <section id="home">
+      <h1 id="title">مرحبًا بك في موقعي</h1>
+      <p id="description">أنا [اسمك]، مطور ويب محترف.</p>
+    </section>
+    <section id="about">
+      <h2>عني</h2>
+      <p id="about-description">[أدخل هنا نبذة مختصرة عن نفسك].</p>
+    </section>
+    <section id="portfolio">
+      <h2>معرض الأعمال</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-item">مشروع 1</div>
+        <div class="portfolio-item">مشروع 2</div>
+        <div class="portfolio-item">مشروع 3</div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>تواصل معي</h2>
+      <form>
+        <input type="text" placeholder="اسمك" id="contact-name">
+        <input type="email" placeholder="بريدك الإلكتروني" id="contact-email">
+        <textarea placeholder="رسالتك" id="contact-message"></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
   <footer>
     <p>© 2024 جميع الحقوق محفوظة</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
