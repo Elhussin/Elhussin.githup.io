@@ -30,15 +30,27 @@
         <div class="portfolio-item">مشروع 3</div>
       </div>
     </section>
-    <section id="contact">
-      <h2>تواصل معي</h2>
-      <form>
-        <input type="text" placeholder="اسمك" id="contact-name">
-        <input type="email" placeholder="بريدك الإلكتروني" id="contact-email">
-        <textarea placeholder="رسالتك" id="contact-message"></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-    </section>
+    <section id="gallery">
+  <h2>معرض الصور</h2>
+  <div class="gallery-container">
+    <img src="image1.jpg" alt="صورة 1" class="gallery-item">
+    <img src="image2.jpg" alt="صورة 2" class="gallery-item">
+    <img src="image3.jpg" alt="صورة 3" class="gallery-item">
+    <img src="image4.jpg" alt="صورة 4" class="gallery-item">
+    <img src="image5.jpg" alt="صورة 5" class="gallery-item">
+    <img src="image6.jpg" alt="صورة 6" class="gallery-item">
+  </div>
+</section>
+<section id="contact">
+  <h2>تواصل معي</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="اسمك" required>
+    <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+    <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+  <p id="form-status"></p>
+</section>
   </main>
   <footer>
     <p>© 2024 جميع الحقوق محفوظة</p>
